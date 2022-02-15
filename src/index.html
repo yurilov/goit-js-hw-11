@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Заголовок страницы</title>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -12,16 +13,22 @@
     />
   </head>
   <body>
-  
-    <form class="search-form" id="search-form">
-      <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
-      <button type="submit" data-submit>Search</button>
-    </form>
-
-    <div class="gallery">
+    <section class="section search">
+      <div class="container">
+        <div class="wrap">
+        <form class="search-form" id="search-form">
+          <input type="search" name="searchQuery" class="search-input" autocomplete="off" placeholder="Search images..." />
+          <button type="submit" class="search-btn" data-submit>
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        </div>
+      </div>
+    </section>
+    
+    <div class="container gallery">
       <!-- Картки зображень -->
     </div>
-    
     <script src="./index.js"></script>
   </body>
 </html>
