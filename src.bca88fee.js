@@ -75,4 +75,4 @@ module.exports=require("./lib/axios");
 },{"./fetchImgSearch":"kVIb","./getRefs":"qJUB","notiflix/build/notiflix-notify-aio":"MeeU"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/renderGallery");
 },{"./sass/main.scss":"clu1","./js/renderGallery":"L4ME"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11/src.b2a89eeb.js.map
+//# sourceMappingURL=/goit-js-hw-11/src.bca88fee.js.map
