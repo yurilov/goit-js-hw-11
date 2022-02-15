@@ -1,4 +1,4 @@
-import { fetchSearch } from './fetchImgSearch';
+import { fetchSearch } from './api/fetchImgSearch';
 import { refs } from './getRefs';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
