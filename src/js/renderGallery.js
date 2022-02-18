@@ -2,6 +2,8 @@ import { fetchSearch } from './api/fetchImgSearch';
 import { refs } from './getRefs';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import galleryCard from './templates/galleryCard.hbs';
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 refs.formRef.addEventListener('submit', onFormSubmit);
 

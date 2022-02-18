@@ -3,16 +3,23 @@ import axios from 'axios';
 import settings from './settings';
 
 const { BASE_URL, API_KEY } = settings;
-
+let userQuery = '';
 axios.defaults.baseURL = BASE_URL;
 
-export async function fetchSearch(q, page = 1, perPage = 39) {
+export async function fetchSearch(q, page, perPage = 39) {
   try {
-    const result = await axios.get(
+    if (userQuery !== q) {
+      userQuery = q;
+      page = 1;
+    }
+
+    const response = await axios.get(
       `?key=${API_KEY}&per_page=${perPage}&page=${page}&q=${q}&image_type=photo&orientation=horizontal&safesearch=true`,
     );
-    Notify.success(`Hurray, we found ${result.data.totalHits}`);
-    return result.data;
+
+    Notify.success(`Hurray, we found ${response.data.totalHits}`);
+
+    return response.data;
   } catch {
     Notify.failure('Sorry, cant find such images!');
   }
