@@ -69,7 +69,7 @@ module.exports=require("./lib/axios");
 },{"./lib/axios":"nUiQ"}],"trkg":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const e={API_KEY:"25706791-83f254c628a19fe308d2a3f92",BASE_URL:"https://pixabay.com/api/"};var t=e;exports.default=t;
 },{}],"JO9n":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.fetchSearch=u;var e=require("notiflix/build/notiflix-notify-aio"),t=r(require("axios")),a=r(require("./settings"));function r(e){return e&&e.__esModule?e:{default:e}}const{BASE_URL:i,API_KEY:o}=a.default;async function u(a,r=1,i=39){try{const u=await t.default.get(`?key=${o}&per_page=${i}&page=${r}&q=${a}&image_type=photo&orientation=horizontal&safesearch=true`);return e.Notify.success(`Hurray, we found ${u.data.total}`),u.data}catch{e.Notify.failure("Sorry, cant find such images!")}}t.default.defaults.baseURL=i;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.fetchSearch=u;var e=require("notiflix/build/notiflix-notify-aio"),t=r(require("axios")),a=r(require("./settings"));function r(e){return e&&e.__esModule?e:{default:e}}const{BASE_URL:i,API_KEY:o}=a.default;async function u(a,r=1,i=39){try{const u=await t.default.get(`?key=${o}&per_page=${i}&page=${r}&q=${a}&image_type=photo&orientation=horizontal&safesearch=true`);return e.Notify.success(`Hurray, we found ${u.data.totalHits}`),u.data}catch{e.Notify.failure("Sorry, cant find such images!")}}t.default.defaults.baseURL=i;
 },{"notiflix/build/notiflix-notify-aio":"MeeU","axios":"dZBD","./settings":"trkg"}],"qJUB":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.refs=void 0;const e={formRef:document.querySelector(".search-form"),inputRef:document.querySelector('[name = "searchQuery"]'),submitBtnRef:document.querySelector("[data-submit]"),galleryRef:document.querySelector(".gallery")};exports.refs=e;
 },{}],"pAws":[function(require,module,exports) {
@@ -83,4 +83,4 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"./api/fetchImgSearch":"JO9n","./getRefs":"qJUB","notiflix/build/notiflix-notify-aio":"MeeU","./templates/galleryCard.hbs":"lXkz"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/renderGallery");
 },{"./sass/main.scss":"clu1","./js/renderGallery":"L4ME"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11/src.10bb829a.js.map
+//# sourceMappingURL=/goit-js-hw-11/src.ca6ad0d8.js.map
