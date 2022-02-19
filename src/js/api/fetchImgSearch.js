@@ -17,8 +17,6 @@ export async function fetchSearch(q, page, perPage = 40) {
       `?key=${API_KEY}&per_page=${perPage}&page=${page}&q=${q}&image_type=photo&orientation=horizontal&safesearch=true`,
     );
 
-    Notify.success(`Hurray, we found ${response.data.totalHits}`);
-
     return response.data;
   } catch (e) {
     Notify.failure('Sorry, cant find such images!');
