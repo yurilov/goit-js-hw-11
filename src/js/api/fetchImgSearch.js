@@ -6,7 +6,7 @@ const { BASE_URL, API_KEY } = settings;
 let userQuery = '';
 axios.defaults.baseURL = BASE_URL;
 
-export async function fetchSearch(q, page, perPage = 39) {
+export async function fetchSearch(q, page, perPage = 40) {
   try {
     if (userQuery !== q) {
       userQuery = q;
@@ -20,7 +20,7 @@ export async function fetchSearch(q, page, perPage = 39) {
     Notify.success(`Hurray, we found ${response.data.totalHits}`);
 
     return response.data;
-  } catch {
+  } catch (e) {
     Notify.failure('Sorry, cant find such images!');
   }
 }
